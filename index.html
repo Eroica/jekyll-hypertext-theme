@@ -1,0 +1,20 @@
+---
+#
+# By default, content added below the "---" mark will appear in the home page
+# between the top bar and the list of recent posts.
+# To change the home page layout, edit the _layouts/home.html file.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
+layout: home
+---
+
+<ul class="colored-links post-list" data-vbox>
+	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+	{%- for post in site.posts -%}
+	<li>
+		<time class="text--pale">{{ post.date | date: date_format }}</time>
+		<h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+		{{ post.excerpt }}
+	</li>
+	{%- endfor -%}
+</ul>

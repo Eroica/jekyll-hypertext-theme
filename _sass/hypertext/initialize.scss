@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+$accent-color: #419BF9;
+$blue-hue-1: #419BF9;
+$blue-hue-2: #1081f7;
+$font-color-dark: #323346;
+$font-color-pale: #999999;
+
+$dark-hue-1: #2d3741;
+$dark-hue-2: #38434c;
+$dark-hue-3: #59656b;
+
+$default-width: 50rem;
+
+$easing: cubic-bezier(.02,.98,.46,.95);
+
+@mixin breakpoint($device) {
+	@media screen and (min-width: $device) {
+		@content;
+	}
+}
+
+@import "hypertext/notosans";
+@import "hypertext/atomic";
+
+@import "hypertext/page";
+@import "hypertext/layouts";
+@import "hypertext/typography";
+
+@import "hypertext/components/badge";
+@import "hypertext/components/box";
+@import "hypertext/components/button";
+@import "hypertext/components/switch";
+
+@import "hypertext/helpers";

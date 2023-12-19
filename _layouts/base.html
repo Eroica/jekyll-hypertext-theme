@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body class="is-loading no-js" data-vbox="-medium">
+	{% include header.html %}
+
+	<main data-vbox="-large">
+		{{ content }}
+	</main>
+
+	<p class="container Ta(c) Pe(n) text--pale">※</p>
+
+	{% include custom-footer.html %}
+
+	<script>
+		"use strict";
+
+		let $body;
+		let $switch;
+
+		if (sessionStorage.getItem("dark") === "true") {
+			document.querySelector("body").classList.add("-dark");
+			document.querySelector("#is_darkness").checked = true;
+		}
+
+		function toggleDarkness (_) {
+			$body.classList.toggle("-dark");
+			sessionStorage.setItem("dark", $switch.checked);
+		}
+
+		window.addEventListener("load", function () {
+			$body = document.querySelector("body");
+			$switch = document.querySelector("#is_darkness");
+			$body.classList.remove("is-loading", "no-js");
+		});
+	</script>
+</body>
+</html>
