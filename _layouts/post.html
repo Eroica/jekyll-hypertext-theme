@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<section data-vbox="-large">
+	<article class="colored-links underlined-links" data-vbox="-medium">
+		<header>
+			<h1>{{ page.title | escape }}</h1>
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
+		</header>
+
+		<div data-vbox>
+			{{ content }}
+		</div>
+	</article>
+</section>

@@ -1,0 +1,33 @@
+<div class="container Pos(r)">
+	<p class="switch-row">
+		{% include feather/sun.svg %}
+
+		<label class="switch no-label" for="ThemeSwitch" title="Enable dark theme">
+			<input type="checkbox" class="switch-input" id="ThemeSwitch" onchange="toggleDarkness()"> <span class="hint Fz(0)">Enable dark theme</span>
+			<span class="switch-trough"></span>
+			<span class="switch-handle"></span>
+		</label>
+
+		{% include feather/moon.svg %}
+	</p>
+</div>
+
+{% if page.url != "/" %}
+<p class="colored-links back-link"><a href="/{{ site.baseurl }}" data-flow="-center">{% include feather/arrow-left.svg %} Back to main page</a></p>
+{% endif %}
+
+<input id="FillWidthCheckbox" type="checkbox"><label for="FillWidthCheckbox">Let text fill entire width</label>
+
+{% include custom-header.html %}
+
+<script>
+	"use strict";
+
+	if (sessionStorage.getItem("isFillWidth") === "true") {
+		document.getElementById("FillWidthCheckbox").checked = true;
+	}
+
+	document.getElementById("FillWidthCheckbox").addEventListener("change", (e) => {
+		sessionStorage.setItem("isFillWidth", e.target.checked);
+	});
+</script>
