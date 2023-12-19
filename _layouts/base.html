@@ -22,7 +22,7 @@
 
 		if (sessionStorage.getItem("dark") === "true") {
 			document.querySelector("body").classList.add("-dark");
-			document.querySelector("#is_darkness").checked = true;
+			document.querySelector("#ThemeSwitch").checked = true;
 		}
 
 		function toggleDarkness (_) {
@@ -32,7 +32,7 @@
 
 		window.addEventListener("load", function () {
 			$body = document.querySelector("body");
-			$switch = document.querySelector("#is_darkness");
+			$switch = document.querySelector("#ThemeSwitch");
 			$body.classList.remove("is-loading", "no-js");
 		});
 	</script>
