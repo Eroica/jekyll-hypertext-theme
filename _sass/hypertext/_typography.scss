@@ -1,0 +1,255 @@
+body, input, select, textarea {
+	font-family: "NotoSans", "Segoe UI", sans-serif;
+	font-weight: 400;
+	line-height: 1.8;
+	color: $font-color-dark;
+	hyphens: auto;
+
+	&.-dark {color: #f6f6f6;}
+}
+
+strong, b, .text--strong {
+	font-weight: 600;
+}
+.-dark strong, .-dark b, .-dark .text--strong {color: white;}
+
+del {color: $font-color-pale;}
+ins {text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	color: #484848;
+}
+.-dark h1, .-dark h2, .-dark h3, .-dark h4, .-dark h5, .-dark h6 {color: #fff;}
+h1 {
+	font-size: 2em;
+	font-weight: 600;
+}
+h2 {
+	font-size: 1.4em;
+	font-weight: 600;
+}
+
+.a {cursor: pointer}
+a, .a {transition: color .2s $easing;}
+a, .-dark a strong,
+.a, .-dark .a strong {color: inherit;}
+.colored-links a, .colored-links .a {
+	color: $blue-hue-1;
+	&:visited {color: $blue-hue-2;}
+	&:hover {color: lighten($blue-hue-1, 10);}
+}
+.underlined-links a, .underlined-links .a {
+	border-bottom: 1px solid rgba(#8f97a3, .25);
+	&:hover {border-color: lighten($blue-hue-1, 10);}
+}
+a svg.feather-arrow-right {
+	margin-left: .25em;
+	width: 1.5em;
+}
+
+img, video {max-width: 100%; }
+video {display: block; }
+
+hr {
+	border-color: rgb(233, 233, 233);
+}
+.-dark hr {border-color: rgba(170, 178, 189, .2) }
+
+pre {
+	@extend .box;
+}
+pre.with-line-numbers {
+	padding-left: 0;
+}
+pre.with-line-numbers span {
+	counter-increment: line;
+	display: list-item;
+}
+pre.with-line-numbers span::before {
+	position: relative;
+	margin-right: 1.5em;
+	color: #939393;
+	width: 4ch;
+	display: inline-block;
+	text-align: right;
+	z-index: 2;
+	content: counter(line);
+}
+pre.with-line-numbers { counter-reset: line; }
+code, kbd {
+	font-size: .875em;
+	font-family: "Cascadia Code", Consolas, Inconsolata, monospace;
+}
+kbd {
+	background-color: #fafbfc;
+	border: 1px solid #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 5px;
+	box-shadow: inset 0 -1px 0 #959da5;
+	color: #444d56;
+	font-size: 12px;
+	padding: 4px 6px;
+}
+
+ul:not(.post-list) {
+	li {
+		position: relative;
+		margin-left: 1.4em;
+	}
+	li::before {
+		color: #ccc;
+		position: absolute;
+		content: "—";
+		left: -1.5em;
+		top: -.1em;
+	}
+}
+.-dark ul > li::before {color: rgba(170, 178, 189, .2); }
+
+ol {
+	list-style: decimal;
+	margin-left: 24px;
+}
+
+dt {
+	font-weight: 600;
+}
+dt + dd {
+	margin-top: .5em;
+}
+dd + dt {
+	margin-top: 1em;
+}
+
+article h1,
+article h2 {
+	font-size: 1.1rem;
+}
+article p + h2 {
+	margin-top: 2em !important;
+}
+
+blockquote {
+	@extend [data-VBox];
+	font-style: italic;
+	margin-left: 24px;
+	border-left: 2px solid #e7e7e9;
+	padding-left: 24px;
+
+	footer {
+		@extend .text--pale;
+		@extend .colored-links;
+		font-size: .875rem;
+	}
+}
+
+tr, td {
+	display: block;
+}
+tr + tr {
+	margin-top: 1em;
+}
+td:first-of-type {
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 800px) {
+	tr {display: table-row;}
+	td {display: table-cell;}
+	td + td {padding-left: 1em;}
+	tr + tr > td {padding-top: 1em;}
+}
+
+main > figure {
+	display:  flex;
+	overflow-x: auto;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+main > figure a, figure img {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+}
+figure img {
+	max-width: initial;
+}
+
+
+
+
+
+.back-link {
+	margin-top: 0 !important;
+	display: inline-block;
+	position: absolute;
+	top: 1em;
+	left: 25px;
+
+	svg {
+		width: 1.5em;
+		margin-right: 8px;
+	}
+}
+
+#FillWidthCheckbox,
+#FillWidthCheckbox + label {
+	font-size: 16px;
+	display: none;
+}
+#FillWidthCheckbox:not(:checked) ~ main section {
+	max-width: $default-width;
+}
+
+@media screen and (min-width: calc($default-width + 100px)) {
+	body {
+		padding: 5rem 50px 25px 50px;
+	}
+
+	#FillWidthCheckbox {
+		display: inline;
+		position: absolute;
+		top: 1.5em;
+		left: 58px;
+		margin-top: 0;
+
+		+ label {
+			display: inline;
+			position: absolute;
+			top: 1em;
+			left: 82px;
+			margin-top: 0;
+		}
+	}
+
+	.back-link {
+		left: 50px;
+
+		~ #FillWidthCheckbox {
+			top: 4rem;
+
+			+ label {
+				top: 3.5rem;
+			}
+		}
+	}
+
+	main > figure {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+}
+
+
+
+.text-small {font-size: .85em;}
+.text-pale {color: $font-color-pale;}
+.text--pale, nav {color: $font-color-pale;}
+.section-title {
+	font-size: .95rem;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}

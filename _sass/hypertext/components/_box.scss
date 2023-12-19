@@ -1,0 +1,12 @@
+.box {
+	border: 1px solid #D4D9DD;
+	border-radius: 5px;
+	padding: 20px;
+}
+.-dark .box {
+	border-color: rgba(170, 178, 189, .2);
+}
+.box.-primary,
+.-dark .box.-primary {
+	border-color: $accent-color;
+}

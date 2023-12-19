@@ -1,0 +1,22 @@
+[data-VBox] > * + * {margin-top: 1em;}
+[data-VBox="-small"] > * + * {margin-top: .5em;}
+[data-VBox="-medium"] > * + * {margin-top: 2em;}
+[data-VBox="-large"] > * + * {margin-top: 3em;}
+
+[data-HBox] {
+	> *:not(:last-child) {margin-right: 1em;}
+	&[data-HBox~="-small"] > *:not(:last-child) {margin-right: .5em;}
+	&[data-HBox~="-medium"] > *:not(:last-child) {margin-right: 2em;}
+}
+
+[data-Flow] {
+	display: inline-flex;
+	&[data-Flow~="-center"] {align-items: center}
+}
+
+.container {
+	max-width: 100%;
+	width: $default-width;
+
+	&.-small {width: 37rem;}
+}
