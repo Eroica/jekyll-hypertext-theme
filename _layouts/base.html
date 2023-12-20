@@ -17,10 +17,14 @@
 	<script>
 		"use strict";
 
+		function isDarkMode () {
+			return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+		}
+
 		let $body;
 		let $switch;
 
-		if (sessionStorage.getItem("dark") === "true") {
+		if (sessionStorage.getItem("dark") === "true" || isDarkMode()) {
 			document.querySelector("body").classList.add("-dark");
 			document.querySelector("#ThemeSwitch").checked = true;
 		}
