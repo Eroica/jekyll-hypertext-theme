@@ -6,12 +6,20 @@ body, input, select, textarea {
 	hyphens: auto;
 
 	&.-dark {color: #f6f6f6;}
+
+	@media (prefers-color-scheme: dark) {
+		color: #f6f6f6;
+	}
 }
 
 strong, b, .text--strong {
 	font-weight: 600;
+
+	@media (prefers-color-scheme: dark) {
+		color: #ffffff;
+	}
 }
-.-dark strong, .-dark b, .-dark .text--strong {color: white;}
+.-dark strong, .-dark b, .-dark .text--strong {color: #ffffff;}
 
 del {color: $font-color-pale;}
 ins {text-decoration: none;}
@@ -19,6 +27,10 @@ ins {text-decoration: none;}
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	color: #484848;
+
+	@media (prefers-color-scheme: dark) {
+		color: #fff;
+	}
 }
 .-dark h1, .-dark h2, .-dark h3, .-dark h4, .-dark h5, .-dark h6 {color: #fff;}
 h1 {
@@ -32,8 +44,7 @@ h2 {
 
 .a {cursor: pointer}
 a, .a {transition: color .2s $easing;}
-a, .-dark a strong,
-.a, .-dark .a strong {color: inherit;}
+a, .-dark a strong, .a, .-dark .a strong {color: inherit;}
 .colored-links a:not(button):not(.button),
 .colored-links .a:not(button):not(.button) {
 	color: $blue-hue-1;
@@ -56,6 +67,10 @@ figure img {max-width: initial;}
 
 hr {
 	border-color: rgb(233, 233, 233);
+
+	@media (prefers-color-scheme: dark) {
+		border-color: rgba(170, 178, 189, .2);
+	}
 }
 .-dark hr {border-color: rgba(170, 178, 189, .2) }
 
@@ -106,9 +121,13 @@ ul:not(.post-list) {
 		content: "—";
 		left: -1.5em;
 		top: -.1em;
+
+		@media (prefers-color-scheme: dark) {
+			color: rgba(170, 178, 189, .2);
+		}
 	}
 }
-.-dark ul > li::before {color: rgba(170, 178, 189, .2); }
+.-dark ul > li::before {color: rgba(170, 178, 189, .2);}
 
 ol {
 	list-style: decimal;
