@@ -11,7 +11,21 @@
 	}
 }
 .no-js .switch-row {
-	display: none;
+	.switch {
+		display: none;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.feather-sun {
+			display: none;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		.feather-moon {
+			display: none;
+		}
+	}
 }
 
 @media screen and (min-width: calc($default-width + 100px)) {
