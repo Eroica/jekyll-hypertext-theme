@@ -11,7 +11,7 @@ It’s called _Hypertext_, in memory of the original web.
   * The checkbox works entirely without JavaScript; if JavaScript is available, user choice is persisted in `localStorage`
   * Hidden if viewport is so small that text is full-width anyway
 * A switch to toggle dark mode
-  * Currently only available if JavaScript is enabled (hidden otherwise); persists user choice to `localStorage`
+  * Persists user choice to `localStorage`; if no JS is available, then CSS' `prefers-color-scheme` is used
   * Animations are skipped on initial load so that there is no sudden theme change
 * No fixed font size to account for user preference (set in the browser)
 * CSS is put into `<head>` (only on landing page) to improve loading speed
