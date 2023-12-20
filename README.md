@@ -1,8 +1,22 @@
 # jekyll-hypertext-theme
 
-This is the theme which I use on my websites, and put into its own repository so that I can include it easily.
+This is the theme which I use on my websites, and put into its own repository so that I can import it easily.
 
-The theme is called _Hypertext_, in memory of the original web.
+It’s called _Hypertext_, in memory of the original web.
+
+## Features
+
+* Single-column layout with about 20 words per line
+* A checkbox to remove this maximum width and let text fill the entire viewport
+  * The checkbox works entirely without JavaScript; if JavaScript is available, user choice is persisted in `localStorage`
+  * Hidden if viewport is so small that text is full-width anyway
+* A switch to toggle dark mode
+  * Currently only available if JavaScript is enabled (hidden otherwise); persists user choice to `localStorage`
+  * Animations are skipped on initial load so that there is no sudden theme change
+* No fixed font size to account for user preference (set in the browser)
+* CSS is put into `<head>` (only on landing page) to improve loading speed
+
+Noto Sans (400, 600) is included in `assets/fonts/`, and currently sub-set to Latin characters which yields about 20&nbsp;KB per file.
 
 ## License
 
