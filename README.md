@@ -4,6 +4,8 @@ This is the theme which I use on my websites, and put into its own repository so
 
 It’s called _Hypertext_, in memory of the original web.
 
+![Sample screenshot](Screenshot.png)
+
 ## Features
 
 * Single-column layout with about 20 words per line
