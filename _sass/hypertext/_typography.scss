@@ -116,8 +116,8 @@ ul:not(.post-list) {
 	li::before {
 		color: #ccc;
 		position: absolute;
-		content: "—";
-		left: -1.5em;
+		content: "–";
+		left: -1em;
 		top: -.1em;
 
 		@media (prefers-color-scheme: dark) {
