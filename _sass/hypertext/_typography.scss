@@ -48,13 +48,11 @@ a, .-dark a strong, .a, .-dark .a strong {color: inherit;}
 .colored-links a:not(button):not(.button),
 .colored-links .a:not(button):not(.button) {
 	color: $blue-hue-1;
-	&:visited {color: $blue-hue-2;}
-	&:hover {color: lighten($blue-hue-1, 10);}
+	&:hover {color: $blue-hue-2;}
 }
 .underlined-links a:not(button):not(.button),
 .underlined-links .a:not(button):not(.button) {
-	border-bottom: 1px solid rgba(#8f97a3, .25);
-	&:hover {border-color: lighten($blue-hue-1, 10);}
+	text-decoration: underline;
 }
 a svg.feather-arrow-right {
 	margin-left: .25em;
