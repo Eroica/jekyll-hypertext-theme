@@ -11,6 +11,7 @@
 		{% include main.scss %}
 		{% endcapture %}
 		{{ include_to_scssify | scssify }}
+		{% include css/custom.css %}
 	</style>
 	{% else %}
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
