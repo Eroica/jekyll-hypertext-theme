@@ -25,7 +25,7 @@ Inter (400, 600) is included in `assets/fonts/`, and currently sub-set to Latin 
 This project is published under the zlib license (see `LICENSE` file in this repository).
 
 ```
-Copyright (C) 2023 Eroica
+Copyright (C) 2023-2024 Eroica
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
