@@ -18,7 +18,7 @@ It’s called _Hypertext_, in memory of the original web.
 * No fixed font size to account for user preference (set in the browser)
 * CSS is put into `<head>` (only on landing page) to improve loading speed
 
-Noto Sans (400, 600) is included in `assets/fonts/`, and currently sub-set to Latin characters which yields about 20&nbsp;KB per file.
+Inter (400, 600) is included in `assets/fonts/`, and currently sub-set to Latin characters which yields about 20&nbsp;KB per file.
 
 ## License
 
