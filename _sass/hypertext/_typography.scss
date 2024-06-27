@@ -174,7 +174,7 @@ td:first-of-type {
 	white-space: nowrap;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: calc($default-width + 100px)) {
 	tr {display: table-row;}
 	td {display: table-cell;}
 	td + td {padding-left: 1em;}
