@@ -14,7 +14,5 @@ Gem::Specification.new do |spec|
   spec.files = Dir["assets/*"] + Dir["_includes/*"] + Dir["_layouts/*"] + Dir["_sass/*"]
   spec.files += Dir["README.md", "LICENSE"]
 
-  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
-
   spec.add_runtime_dependency "jekyll", ">= 3.5", "< 5.0"
 end
