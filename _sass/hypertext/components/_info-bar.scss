@@ -4,7 +4,7 @@
 	border-radius: 5px;
 	padding: 1em 1.5em;
 
-	&.error {
+	&.error, &.danger {
 		background-color: #fde7e9;
 	}
 
