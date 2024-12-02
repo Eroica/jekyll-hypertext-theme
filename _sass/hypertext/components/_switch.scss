@@ -1,6 +1,6 @@
 .switch-row {
 	position: absolute;
-	top: -1em;
+	top: -3em;
 	right: 0;
 
 	svg {padding: 2px;}
@@ -30,7 +30,7 @@
 
 @media screen and (min-width: calc($default-width + 100px)) {
 	.switch-row {
-		top: -4rem;
+		top: -6rem;
 	}
 }
 
