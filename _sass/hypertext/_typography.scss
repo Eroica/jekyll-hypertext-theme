@@ -215,7 +215,6 @@ main > figure a, figure img {
 
 #FillWidthCheckbox,
 #FillWidthCheckbox + label {
-	font-size: 16px;
 	display: none;
 }
 #FillWidthCheckbox:not(:checked) ~ header,
@@ -232,7 +231,7 @@ main > figure a, figure img {
 	#FillWidthCheckbox {
 		display: inline;
 		position: absolute;
-		top: 1.5em;
+		top: calc(1em + 0.9em - 7px);
 		left: 58px;
 		margin-top: 0;
 
