@@ -12,6 +12,15 @@ body, input, select, textarea {
 	}
 }
 
+/* Override for destyle.css: Don't use pointer if it's not an <a> tag */
+label[for],
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+	cursor: default;
+}
+
 strong, b, .text--strong {
 	font-weight: 600;
 
