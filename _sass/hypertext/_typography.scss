@@ -51,6 +51,11 @@ h2 {
 	font-weight: 600;
 }
 
+input[type="checkbox"]:focus-visible {
+	outline: 2px solid black;
+	outline-offset: 2px;
+}
+
 .a {cursor: pointer}
 a, .a {transition: color .2s $easing;}
 a, .-dark a strong, .a, .-dark .a strong {color: inherit;}
