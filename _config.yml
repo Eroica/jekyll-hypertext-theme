@@ -14,3 +14,11 @@ sass:
   load_paths:
     - _sass
     - node_modules
+
+exclude:
+  - jekyll-hypertext-theme.gemspec
+  - LICENSE
+  - package-lock.json
+  - package.json
+  - README.md
+  - Screenshot.png
