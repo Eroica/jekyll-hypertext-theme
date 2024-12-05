@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-hypertext-theme"
-  spec.version  = "1.3.1"
+  spec.version  = "1.3.2"
   spec.authors  = ["Eroica"]
 
   spec.summary  = "A theme for Jekyll."
