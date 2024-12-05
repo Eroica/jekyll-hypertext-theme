@@ -246,14 +246,7 @@ main > figure a, figure img {
 
 	.back-link {
 		left: 50px;
-
-		~ #FillWidthCheckbox {
-			top: 4rem;
-
-			+ label {
-				top: 3.5rem;
-			}
-		}
+		top: 4em;
 	}
 
 	main > figure {
