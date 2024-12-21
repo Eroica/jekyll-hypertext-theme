@@ -64,6 +64,11 @@ a, .-dark a strong, .a, .-dark .a strong {color: inherit;}
 	color: $blue-hue-1;
 	&:hover {color: $blue-hue-2;}
 }
+.-dark .colored-links a:not(button):not(.button),
+.-dark .colored-links .a:not(button):not(.button) {
+	color: #1f8aff;
+	&:hover {color: #5fadff;}
+}
 .underlined-links a:not(button):not(.button),
 .underlined-links .a:not(button):not(.button) {
 	text-decoration: underline;
