@@ -22,3 +22,4 @@ exclude:
   - package.json
   - README.md
   - Screenshot.png
+  - vendor
