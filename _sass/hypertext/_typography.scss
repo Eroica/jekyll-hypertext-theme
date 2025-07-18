@@ -128,7 +128,7 @@ ul:not(.post-list) {
 		margin-left: 1.4em;
 	}
 	li::before {
-		color: #ccc;
+		color: $font-color-pale;
 		position: absolute;
 		content: "–";
 		left: -1em;
@@ -156,9 +156,15 @@ dd + dt {
 	margin-top: 1em;
 }
 
-article h1,
+article header time {
+	color: $font-color-pale;
+	font-size: .85rem;
+}
+article h1 {
+	font-size: 1.5rem;
+}
 article h2 {
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 }
 article p + h2 {
 	margin-top: 2em !important;
