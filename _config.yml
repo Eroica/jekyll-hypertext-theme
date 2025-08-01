@@ -11,6 +11,7 @@ description: >
   results) and in your feed.xml site description.
 
 sass:
+  style: compressed
   load_paths:
     - _sass
     - node_modules
