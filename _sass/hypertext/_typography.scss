@@ -1,14 +1,21 @@
 body, input, select, textarea {
+	background-color: #ffffff;
+	padding: 2rem 25px 25px 25px;
 	font-family: "InterWeb", sans-serif;
 	font-weight: 400;
 	line-height: 1.8;
 	color: $font-color-dark;
 	hyphens: auto;
+	transition: background-color .2s $easing;
 
-	&.-dark {color: #f6f6f6;}
+	&.-dark {
+		color: #f6f6f6;
+		background-color: #212528;
+	}
 
 	@media (prefers-color-scheme: dark) {
 		color: #f6f6f6;
+		background-color: #212528;
 	}
 }
 
