@@ -146,11 +146,13 @@ ul:not(.post-list) {
 		margin-left: 1.4em;
 	}
 	li::before {
-		color: $font-color-pale;
 		position: absolute;
-		content: "–";
+		content: "";
+		background-color: #9CA3AF;
+		height: .1em;
+		width: .5em;
 		left: -1em;
-		top: -.1em;
+		top: .9em;
 
 		@media (prefers-color-scheme: dark) {
 			color: rgba(170, 178, 189, .2);
