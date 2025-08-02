@@ -120,7 +120,7 @@ pre.with-line-numbers span::before {
 }
 pre.with-line-numbers { counter-reset: line; }
 code, kbd {
-	font-size: .875em;
+	@extend .text-small;
 	font-family: "Cascadia Code", Consolas, Inconsolata, monospace;
 }
 kbd {
@@ -132,6 +132,12 @@ kbd {
 	color: #444d56;
 	font-size: 12px;
 	padding: 4px 6px;
+}
+
+.section-title {
+	font-size: .95rem;
+	letter-spacing: .5px;
+	text-transform: uppercase;
 }
 
 ul:not(.post-list) {
@@ -169,8 +175,8 @@ dd + dt {
 }
 
 article header time {
+	@extend .text-small;
 	color: $font-color-pale;
-	font-size: .85rem;
 }
 article h1 {
 	font-size: 1.5rem;
@@ -190,9 +196,9 @@ blockquote {
 	padding-left: 24px;
 
 	footer {
-		@extend .text--pale;
+		@extend .text-small;
+		@extend .text-pale;
 		@extend .colored-links;
-		font-size: .875rem;
 	}
 }
 
