@@ -222,7 +222,7 @@ main > figure a, figure img {
 	margin-top: 0 !important;
 	display: inline-block;
 	position: absolute;
-	top: 1em;
+	top: 1rem;
 	left: 25px;
 
 	svg {
@@ -249,14 +249,14 @@ main > figure a, figure img {
 	#FillWidthCheckbox {
 		display: inline;
 		position: absolute;
-		top: calc(1em + 0.9em - 7px);
+		top: calc(1.5rem + 0.9rem - 7px);
 		left: 58px;
 		margin-top: 0;
 
 		+ label {
 			display: inline;
 			position: absolute;
-			top: 1em;
+			top: 1.5rem;
 			left: 82px;
 			margin-top: 0;
 		}
