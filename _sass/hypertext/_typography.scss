@@ -1,6 +1,11 @@
+$viewport-x-padding: 25px;
+$viewport-y-padding: 25px;
+$viewport-x-padding-md: 50px;
+$viewport-y-padding-md: 25px;
+
 body, input, select, textarea {
 	background-color: #ffffff;
-	padding: 2rem 25px 25px 25px;
+	padding: 2rem $viewport-x-padding $viewport-y-padding $viewport-x-padding;
 	font-family: "InterWeb", sans-serif;
 	font-weight: 400;
 	line-height: 1.8;
@@ -211,8 +216,8 @@ td:first-of-type {
 main > figure {
 	display:  flex;
 	overflow-x: auto;
-	margin-left: -25px;
-	margin-right: -25px;
+	margin-left: -$viewport-x-padding;
+	margin-right: -$viewport-x-padding;
 }
 main > figure a, figure img {
 	display: block;
@@ -223,7 +228,7 @@ main > figure a, figure img {
 	display: inline-block;
 	position: absolute;
 	top: 1rem;
-	left: 25px;
+	left: $viewport-x-padding;
 
 	svg {
 		width: 1.5em;
@@ -241,9 +246,9 @@ main > figure a, figure img {
 	max-width: $default-width;
 }
 
-@media screen and (min-width: calc($default-width + 100px)) {
+@media screen and (min-width: calc($default-width + ($viewport-x-padding-md * 2))) {
 	body {
-		padding: 5rem 50px 25px 50px;
+		padding: 5rem $viewport-x-padding-md $viewport-y-padding-md $viewport-x-padding-md;
 	}
 
 	#FillWidthCheckbox {
@@ -263,12 +268,12 @@ main > figure a, figure img {
 	}
 
 	.back-link {
-		left: 50px;
+		left: $viewport-x-padding-md;
 		top: 4em;
 	}
 
 	main > figure {
-		margin-left: -50px;
-		margin-right: -50px;
+		margin-left: -$viewport-x-padding-md;
+		margin-right: -$viewport-x-padding-md;
 	}
 }

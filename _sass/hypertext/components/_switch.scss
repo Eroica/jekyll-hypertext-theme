@@ -3,7 +3,9 @@
 	top: -3em;
 	right: 0;
 
-	svg {padding: 2px;}
+	svg {
+		padding: 2px;
+	}
 
 	> * {
 		height: 24px;
@@ -28,7 +30,7 @@
 	}
 }
 
-@media screen and (min-width: calc($default-width + 100px)) {
+@media screen and (min-width: calc($default-width + ($viewport-x-padding-md * 2))) {
 	.switch-row {
 		top: -5.5rem;
 	}
@@ -48,8 +50,12 @@
 	left: 0;
 	opacity: 0;
 }
-.switch-input:focus ~ .switch-handle {box-shadow: 0 0 0 2px rgba(0, 0, 0, .5), 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
-.switch > .switch-input:checked ~ .switch-handle {left: 16px; }
+.switch-input:focus ~ .switch-handle {
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, .5), 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.switch > .switch-input:checked ~ .switch-handle {
+	left: 16px;
+}
 
 .switch-trough {
 	position: relative;
@@ -60,7 +66,9 @@
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 1px rgba(0, 0, 0, 0.15);
 	transition: background 0.15s ease-out;
 }
-.switch-input:checked ~ .switch-trough {background: $accent-color; }
+.switch-input:checked ~ .switch-trough {
+	background: $accent-color;
+}
 
 .switch-handle {
 	position: absolute;
