@@ -2,12 +2,12 @@
 layout: base
 ---
 
-<section data-vbox="-large">
-	<article class="colored-links underlined-links" data-vbox="-medium">
+<section>
+	<article class="colored-links underlined-links" data-vbox>
 		<header>
 			{%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
 			<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
-			<h1>{{ page.title | escape }}</h1>
+			<h2>{{ page.title | escape }}</h2>
 		</header>
 
 		<div data-vbox>

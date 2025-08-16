@@ -12,8 +12,8 @@ layout: home
 	{%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
 	{%- for post in site.posts -%}
 	<li>
-		<time class="text-small text-pale">{{ post.date | date: date_format }}</time>
-		<h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+		<time class="postdate">{{ post.date | date: date_format }}</time>
+		<h2 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
 		{{ post.excerpt }}
 	</li>
 	{%- endfor -%}
